@@ -2,7 +2,7 @@ regdom4j - Detect registered domain library for Java
 ====================================================
 
 regdom4j is registerd domain detector for Java.
-Original implementation is [reg-dom-libs][www.dkim-reputation.org/regdom-libs/]
+Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-libs/).
 
 ## Command Line Usage
 
@@ -23,6 +23,9 @@ Original implementation is [reg-dom-libs][www.dkim-reputation.org/regdom-libs/]
     String result = regdom.getRegisteredDomain("example.com");
 
 ## Javadoc
+TODO :-p
+
+## Updating Effective TLD Database
 TODO :-p
 
 ## Auther
