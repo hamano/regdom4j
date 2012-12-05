@@ -18,9 +18,9 @@ Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-
 ## Library Usage
 
     import jp.co.osstech.regdom4j.RegDomain;
-
+    ...
     RegDomain regdom = new RegDomain();
-    String result = regdom.getRegisteredDomain("example.com");
+    String result = regdom.getRegisteredDomain("www.example.com");
 
 ## Javadoc
 TODO :-p
@@ -33,4 +33,5 @@ HAMANO Tsukasa <hamano@osstech.co.jp>
 
 ## License
 Apache License, Version 2.0
+
 http://www.apache.org/licenses/LICENSE-2.0
