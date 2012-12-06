@@ -3,17 +3,45 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>jp.co.osstech.regdom4j</groupId>
+  <groupId>osstech</groupId>
   <artifactId>regdom4j</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>regdom4j</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/hamano/regdom4j/</url>
+
+  <organization>
+    <name>Open Source Solution Technology Corporation</name>
+    <url>http://www.osstech.co.jp/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/hamano/regdom4j/issues</url>
+  </issueManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <developers>
+    <developer>
+      <id>hamano</id>
+      <name>HAMANO Tsukasa</name>
+      <email>hamano@osstech.co.jp</email>
+      <url>https://github.com/hamano/</url>
+    </developer>
+  </developers>
 
   <dependencies>
     <dependency>
@@ -46,5 +74,20 @@
         </configuration>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>1.0-beta-6</version>
+      </extension>
+    </extensions>
   </build>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>peace.osstch.co.jp</id>
+      <name>Hamano's Maven Repository</name>
+      <url>scpexe://peace/srv/osstech/www/www.osstech.co.jp/html/download/hamano/maven</url>
+    </repository>
+  </distributionManagement>
 </project>
