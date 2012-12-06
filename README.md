@@ -2,17 +2,18 @@ regdom4j - Detect registered domain library for Java
 ====================================================
 
 regdom4j is registerd domain detector for Java.
+This library using [public suffix list](http://publicsuffix.org/).
 Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-libs/).
 
 ## Command Line Usage
 
-    $ java -jar regdom4j.jar www.example.com
+    $ java -jar regdom4j.jar www.sub.example.com
     > example.com
     
-    $ java -jar regdom4j.jar www.example.co.jp
+    $ java -jar regdom4j.jar www.sub.example.co.jp
     > example.co.jp
     
-    $ java -jar regdom4j.jar www.example.shinagawa.tokyo.jp
+    $ java -jar regdom4j.jar www.sub.example.shinagawa.tokyo.jp
     > example.shinagawa.tokyo.jp
 
 ## Library Usage
