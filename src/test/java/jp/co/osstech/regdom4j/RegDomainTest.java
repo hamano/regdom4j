@@ -33,6 +33,25 @@ public class RegDomainTest
 {
     private RegDomain regdom;
 
+    String[][] testDomains = {
+        /* Registerd Domain, FQDN */
+        {"example.com", "example.com"},
+        {"example.com", "www.example.com"},
+        {"example.com", "www.sub.example.com"},
+        {"example.co.jp", "example.co.jp"},
+        {"example.co.jp", "www.example.co.jp"},
+        {"example.co.jp", "www.sub.example.co.jp"},
+        {"example.shinagawa.tokyo.jp", "example.shinagawa.tokyo.jp"},
+        {"example.shinagawa.tokyo.jp", "www.example.shinagawa.tokyo.jp"},
+        {"example.shinagawa.tokyo.jp", "www.sub.example.shinagawa.tokyo.jp"},
+        {"example.gs.oslo.no", "example.gs.oslo.no"},
+        {"example.gs.oslo.no", "www.example.gs.oslo.no"},
+        {"example.gs.oslo.no", "www.sub.example.gs.oslo.no"},
+        {"example.random.sch.uk", "example.random.sch.uk"},
+        {"example.random.sch.uk", "www.example.random.sch.uk"},
+        {"example.random.sch.uk", "www.sub.example.random.sch.uk"},
+    };
+
     /**
      * Create the test case
      *
@@ -61,20 +80,8 @@ public class RegDomainTest
      */
     public void testRegDomain()
     {
-        assertTrue( true );
-        assertEquals("example.com",
-                     regdom.getRegisteredDomain("example.com"));
-        assertEquals("example.com",
-                     regdom.getRegisteredDomain("www.example.com"));
-        assertEquals("example.co.jp",
-                     regdom.getRegisteredDomain("www.example.co.jp"));
-        assertEquals("example.shinagawa.tokyo.jp",
-                     regdom.getRegisteredDomain("www.example.shinagawa.tokyo.jp"));
-        assertEquals("example.gs.oslo.no",
-                     regdom.getRegisteredDomain("www.example.gs.oslo.no"));
-        assertEquals("example.example.uk",
-                     regdom.getRegisteredDomain("www.example.example.uk"));
-        assertEquals("example.example.sch.uk",
-                     regdom.getRegisteredDomain("www.example.example.sch.uk"));
+        for(String pair[]: testDomains){
+            assertEquals(pair[0], regdom.getRegisteredDomain(pair[1]));
+        }
     }
 }
