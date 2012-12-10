@@ -56,6 +56,9 @@ public class RegDomain
 
     private String findRegisteredDomain(LinkedList<String> parts,
                                         HashMap<String, HashMap> node){
+        if(parts.size() == 0){
+            return null;
+        }
         String sub = parts.removeLast();
         String result = null;
         if(sub.equals("!")){
@@ -67,12 +70,13 @@ public class RegDomain
         }else{
             return sub;
         }
-        if (result.equals('#')) {
+        if(result == null){
+            return null;
+        }else if (result.equals('#')) {
             return sub;
-        }else if(result != null){
+        }else{
             return result + "." + sub;
         }
-        return null;
     }
 
     public static void main(String[] args) throws Exception {

@@ -33,7 +33,7 @@ public class RegDomainTest
 {
     private RegDomain regdom;
 
-    String[][] testDomains = {
+    String regularDomains[][] = {
         /* Registerd Domain, FQDN */
         {"example.com", "example.com"},
         {"example.com", "www.example.com"},
@@ -50,6 +50,14 @@ public class RegDomainTest
         {"example.random.sch.uk", "example.random.sch.uk"},
         {"example.random.sch.uk", "www.example.random.sch.uk"},
         {"example.random.sch.uk", "www.sub.example.random.sch.uk"},
+    };
+
+    String alreadyEffectiveTLDs[] = {
+        "com",
+        "co.jp",
+        "shinagawa.tokyo.jp",
+        "gs.oslo.no",
+        "random.sch.uk",
     };
 
     /**
@@ -76,12 +84,23 @@ public class RegDomainTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Regular domain Test
      */
-    public void testRegDomain()
+    public void testRegularDomains()
     {
-        for(String pair[]: testDomains){
+        for(String pair[]: regularDomains){
             assertEquals(pair[0], regdom.getRegisteredDomain(pair[1]));
         }
     }
+
+    /**
+     * Already effective TLD test
+     */
+    public void testAlreadyEffectiveTLDs()
+    {
+        for(String domain: alreadyEffectiveTLDs){
+            assertNull(regdom.getRegisteredDomain(domain));
+        }
+    }
+
 }
