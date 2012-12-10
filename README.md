@@ -6,7 +6,9 @@ This library using [public suffix list](http://publicsuffix.org/).
 Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-libs/).
 
 ## Download
+
 * Binary Download
+
     https://github.com/downloads/hamano/regdom4j/regdom4j-1.0.1.jar
 
 ## Command Line Usage
@@ -28,8 +30,9 @@ Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-
     String result = regdom.getRegisteredDomain("www.example.com");
 
 ### Return Values
-1) null if argument is a effective TLD
-2) The registered domain name if effective TLD is known
+
+1. null if argument is a effective TLD
+2. The registered domain name if effective TLD is known
 
 ## Generating Effective TLD Database
     $ wget -O effective_tld_names.dat "http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1"
