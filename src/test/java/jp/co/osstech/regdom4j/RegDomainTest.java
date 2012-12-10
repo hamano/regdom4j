@@ -41,6 +41,9 @@ public class RegDomainTest
         {"example.co.jp", "example.co.jp"},
         {"example.co.jp", "www.example.co.jp"},
         {"example.co.jp", "www.sub.example.co.jp"},
+        {"example.tokyo.jp", "example.tokyo.jp"},
+        {"example.tokyo.jp", "www.example.tokyo.jp"},
+        {"example.tokyo.jp", "www.sub.example.tokyo.jp"},
         {"example.shinagawa.tokyo.jp", "example.shinagawa.tokyo.jp"},
         {"example.shinagawa.tokyo.jp", "www.example.shinagawa.tokyo.jp"},
         {"example.shinagawa.tokyo.jp", "www.sub.example.shinagawa.tokyo.jp"},
@@ -55,6 +58,7 @@ public class RegDomainTest
     String alreadyEffectiveTLDs[] = {
         "com",
         "co.jp",
+        "tokyo.jp",
         "shinagawa.tokyo.jp",
         "gs.oslo.no",
         "random.sch.uk",
