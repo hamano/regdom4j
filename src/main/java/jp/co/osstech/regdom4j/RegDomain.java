@@ -61,8 +61,8 @@ public class RegDomain
         }
         String sub = parts.removeLast();
         String result = null;
-        if(sub.equals("!")){
-            return "#";
+        if(node.get("!") != null){
+            return "";
         }else if(node.get(sub) != null){
             result = findRegisteredDomain(parts, node.get(sub));
         }else if(node.get("*") != null){
@@ -72,7 +72,7 @@ public class RegDomain
         }
         if(result == null){
             return null;
-        }else if (result.equals('#')) {
+        }else if (result.equals("")) {
             return sub;
         }else{
             return result + "." + sub;

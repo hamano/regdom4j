@@ -47,21 +47,31 @@ public class RegDomainTest
         {"example.shinagawa.tokyo.jp", "example.shinagawa.tokyo.jp"},
         {"example.shinagawa.tokyo.jp", "www.example.shinagawa.tokyo.jp"},
         {"example.shinagawa.tokyo.jp", "www.sub.example.shinagawa.tokyo.jp"},
+        {"city.yokohama.jp", "www.city.yokohama.jp"},
+        {"city.yokohama.jp", "www.sub.city.yokohama.jp"},
         {"example.gs.oslo.no", "example.gs.oslo.no"},
         {"example.gs.oslo.no", "www.example.gs.oslo.no"},
         {"example.gs.oslo.no", "www.sub.example.gs.oslo.no"},
+        {"example.random.uk", "example.random.uk"},
+        {"example.random.uk", "www.example.random.uk"},
+        {"example.random.uk", "www.sub.example.random.uk"},
         {"example.random.sch.uk", "example.random.sch.uk"},
         {"example.random.sch.uk", "www.example.random.sch.uk"},
         {"example.random.sch.uk", "www.sub.example.random.sch.uk"},
+        {"bl.uk", "www.bl.uk"},
+        {"bl.uk", "www.sub.bl.uk"},
     };
 
     String alreadyEffectiveTLDs[] = {
         "com",
         "co.jp",
         "tokyo.jp",
+        "city.yokohama.jp",
         "shinagawa.tokyo.jp",
         "gs.oslo.no",
+        "random.uk",
         "random.sch.uk",
+        "bl.uk",
     };
 
     /**

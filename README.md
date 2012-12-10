@@ -31,8 +31,9 @@ Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-
 1) null if argument is a effective TLD
 2) The registered domain name if effective TLD is known
 
-## Updating Effective TLD Database
-TODO :-p
+## Generating Effective TLD Database
+    $ wget -O effective_tld_names.dat "http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1"
+    $ java -cp regdom4j.jar jp.co.osstech.regdom4j.GenerateEffectiveTLDs effective_tld_names.dat > src/main/resources/effectiveTLDs.xml
 
 ## Auther
 HAMANO Tsukasa <hamano@osstech.co.jp>
