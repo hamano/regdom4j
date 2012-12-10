@@ -9,7 +9,7 @@ Original implementation is [reg-dom-libs](http://www.dkim-reputation.org/regdom-
 
 * Binary Download
 
-    https://github.com/downloads/hamano/regdom4j/regdom4j-1.0.1.jar
+    https://github.com/downloads/hamano/regdom4j/regdom4j-1.0.2.jar
 
 ## Command Line Usage
 
